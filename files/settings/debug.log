@@ -1,4 +1,0 @@
-Another composite manager is already running (xcompmgr)
-
-** (nm-applet:10911): CRITICAL **: nm_secret_agent_register: assertion 'priv->registered == FALSE' failed
-nm-applet-Message: using fallback from indicator to GtkStatusIcon
