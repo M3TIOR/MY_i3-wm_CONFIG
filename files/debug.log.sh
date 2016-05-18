@@ -9,5 +9,6 @@ if ! [ -e ~/.i3/settings/debug.redirect ]; then
 fi
 
 while read line; do
-	echo "$*" >> $line;
+	read stdin
+	echo "$stdin" >> $line;
 done < ~/.i3/settings/debug.redirect

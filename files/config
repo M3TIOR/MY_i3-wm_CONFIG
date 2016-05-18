@@ -7,12 +7,12 @@ font pango:Monospace Sans Mono 10
 
 # -------------- START Hotkeys --------------
 # FN keys
-bindcode 71 exec --no-startup-id xrandr --output HDMI1 --mode 1024x768 --same-as eDP1 >> ~/.i3/settings/debug.log
-bindcode 72 exec --no-startup-id sh ~/.i3/lcontrol.sh down >> ~/.i3/settings/debug.log #xbacklight -dec 10
-bindcode 73 exec --no-startup-id sh ~/.i3/lcontrol.sh up >> ~/.i3/settings/debug.log   #xbacklight -inc 10
-bindcode 74 exec --no-startup-id sh ~/.i3/vcontrol.sh mute >> ~/.i3/settings/debug.log #pactl set-sink-volume 0 0%
-bindcode 75 exec --no-startup-id sh ~/.i3/vcontrol.sh down >> ~/.i3/settings/debug.log #pactl set-sink-volume 0 -5%
-bindcode 76 exec --no-startup-id sh ~/.i3/vcontrol.sh up >> ~/.i3/settings/debug.log   #pactl set-sink-volume 0 +5%
+bindcode 71 exec --no-startup-id xrandr --output HDMI1 --mode 1024x768 --same-as eDP1 || sh ~/.i3/debug.log.sh
+bindcode 72 exec --no-startup-id sh ~/.i3/lcontrol.sh down || sh ~/.i3/debug.log.sh #xbacklight -dec 10
+bindcode 73 exec --no-startup-id sh ~/.i3/lcontrol.sh up || ~/.i3/debug.log.sh   #xbacklight -inc 10
+bindcode 74 exec --no-startup-id sh ~/.i3/vcontrol.sh mute || ~/.i3/debug.log.sh #pactl set-sink-volume 0 0%
+bindcode 75 exec --no-startup-id sh ~/.i3/vcontrol.sh down || ~/.i3/debug.log.sh #pactl set-sink-volume 0 -5%
+bindcode 76 exec --no-startup-id sh ~/.i3/vcontrol.sh up || ~/.i3/debug.log.sh   #pactl set-sink-volume 0 +5%
 # -------------- END Hotkeys ----------------
 
 for_window [class="xterm"] floating enable
