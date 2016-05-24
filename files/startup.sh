@@ -8,7 +8,7 @@ while read line; do
 		#executes the line if it's not a comment
 		d=$(date)
 		echo "$date $line ---"
-		sh -c "$line" 2 || sh ~/.i3/debug.log.sh &
+		sh -c "$line" 2>> ~/.i3/settings/debug.log &
 	fi
 done < ~/.i3/settings/onload
 

@@ -11,9 +11,7 @@ SETTINGSDIR="$i3DIR/settings.d";
 
 #debug redirection unit.
 log(){
-        while read line; do
-        	echo "$(date):$*" >> $line;
-        done < $SETTINGSDIR/debug.redirect
+	echo "$(date):$*"
 }
 
 #get and set settings from file by name.
